@@ -1,8 +1,8 @@
-# BACKEND
 
-Este proyecto es desarrollado para el programa https://www.misiontic2022.gov.co/portal/ para la UdeA (Ciclo 4) programacion web grupo 13-14-15. Nuestro "Kanban Board" lo puedes encontrar en: https://trello.com/b/7c8w6Szn/ciclo-4
+Este proyecto es desarrollado para el programa [Misión TIC 2022](https://www.misiontic2022.gov.co/portal) para la [UdeA](https://lms.misiontic2022udea.com) (Ciclo 4)
+**programacion web grupo 13-14-15**. Nuestro "Kanban Board" lo puedes encontrar en: [Trello](https://trello.com/b/7c8w6Szn/ciclo-4)
 
-\*\*GPI
+# GPI
 Gestión de Proyectos de Investigación
 
 Grupo Pixeles Web
