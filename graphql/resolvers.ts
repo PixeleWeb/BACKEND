@@ -11,7 +11,7 @@ const resolvers ={
             const usuario = await UserModel.findOne({ _id:args._id});
             return usuario;
         },
-                  
+        
 },
 Mutation:{
     crearUsuario: async(parent,args)=>{
