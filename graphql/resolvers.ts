@@ -8,10 +8,10 @@ const resolvers ={
         },  
 
         Usuario: async (parent,args)=>{
-            const usuario = await UserModel.findOne({ _id:args.id});
+            const usuario = await UserModel.findOne({ _id:args._id});
             return usuario;
         },
-                  
+        
 },
 Mutation:{
     crearUsuario: async(parent,args)=>{
