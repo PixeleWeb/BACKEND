@@ -16,12 +16,25 @@ Mutation:{
             apellido: args.apellido,
             identificacion: args.identificacion,
             correo: args.correo,
-            estado: args.estado,
             rol: args.rol,
         });
-        return {usuarioCreado};
+
+        if(Object.keys(args).includes('estado')){
+            usuarioCreado.estado = args.estado;
+        }
+        return usuarioCreado;
+    },
+
+    eliminarUsuario: async(parent, args)=>{
+    if(Object.keys(args).includes('_id')){
+        const usuarioEliminado = await UserModel.findOneAndDelete({_id:args._id});
+        return usuarioEliminado;
+    }else if (Object.keys(args).includes('correo')){
+    const usuarioEliminado = await UserModel.findOneAndDelete({correo:args.correo});
+        return usuarioEliminado;
     }
-}
+    },
+},
 };
 
 export {resolvers};
