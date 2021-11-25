@@ -3,6 +3,8 @@ import {gql} from 'apollo-server-express';
 
 const typeDefs = gql`
 
+scalar Date
+
 enum Enum_EstadoUsuario{
     PENDIENTE
     AUTORIZADO
@@ -16,6 +18,24 @@ enum Enum_Rol{
 
 }
 
+enum Enum_EstadoProyecto{
+    ACTIVO
+    INACTIVO
+}
+
+enum Enum_FaseProyecto{
+    INICIADO
+    DESARROLLO
+    TERMINADO
+    NULO
+}
+
+enum Enum_TipoObjetivo{
+    GENERAL 
+    ESPECIFICO 
+}
+
+
 type Usuario {
     _id: ID!
     nombre:String!
@@ -24,6 +44,22 @@ type Usuario {
     correo:String!
     estado: Enum_EstadoUsuario
     rol:Enum_Rol!
+}
+
+type proyecto{
+    _id:ID!
+    nombre:String!
+    presupuesto:Float!
+    fechaInicio:Date!
+    fechaFin:Date!
+    estado:Enum_EstadoProyecto!
+    fase:Enum_FaseProyecto!
+    lider:Usuario!
+    objetivos:[
+    {descripcion:String!, tipo:Enum_TipoObjetivo!}
+    ]
+
+
 }
 
 
