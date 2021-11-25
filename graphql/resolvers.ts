@@ -3,10 +3,14 @@ import { UserModel } from "../models/user";
 const resolvers ={
     Query:{
         Usuarios: async (parent,args)=>{
-            const Usuarios = await UserModel.find();
-            return Usuarios;    
-                       
-    },  
+            const usuarios = await UserModel.find();
+            return usuarios;    
+        },  
+
+        Usuario: async (parent,args)=>{
+            const usuario = await UserModel.findOne({ _id:args.id});
+            return usuario;
+        },
                   
 },
 Mutation:{
@@ -24,6 +28,21 @@ Mutation:{
         }
         return usuarioCreado;
     },
+
+    editarUsuario :async(parent,args)=>{
+        const usuarioEditado = await UserModel.findByIdAndUpdate(args._id,{
+            nombre: args.nombre,
+            apellido: args.apellido,
+            identificacion: args.identificacion,
+            correo: args.correo,
+            rol: args.rol,
+            estado: args.estado
+
+        });
+        return usuarioEditado;
+
+  
+},
 
     eliminarUsuario: async(parent, args)=>{
     if(Object.keys(args).includes('_id')){
