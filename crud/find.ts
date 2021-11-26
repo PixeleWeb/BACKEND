@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
-import { UserModel } from '../models/user';
-import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums';
-import { ProjectModel } from '../models/project';
+import { UserModel } from '../models/usuario/user';
+import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
+import { ProjectModel } from '../models/proyecto/project';
 
 const main = async()=>{
     await conectarBD();

@@ -11,9 +11,9 @@ enum Enum_EstadoUsuario{
 }
 
 enum Enum_EstadoInscripcion{
-    aceptada = 'Aceptada',
-    rechazada = 'Rechazada',
-    pendiente = 'Pendiente'
+    ACEPTADA = 'ACEPTADA',
+    RECHAZADA = 'RECHAZADA',
+    PENDIENTE = 'PENDIENTE'
 }
 
 enum Enum_EstadoProyecto{
@@ -31,7 +31,7 @@ enum Enum_FaseProyecto{
 }
 
 enum Enum_TipoObjetivo{
-    GENERAL = "GENERALl",
+    GENERAL = "GENERAL",
     ESPECIFICO = "ESPECIFICO",
 }
 

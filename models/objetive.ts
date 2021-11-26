@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose';
-import {Enum_TipoObjetivo} from './enums';
-import { ProyectModel } from './project';
+import {Enum_TipoObjetivo} from './enums/enums';
+import { ProyectModel } from './proyecto/project';
 
 
 interface Objetive  {
@@ -11,7 +11,6 @@ interface Objetive  {
 
 const objectiveSchema = new Schema<Objetive>({
     descripcion: {
-    
         type: String,
         required: true,
 },
