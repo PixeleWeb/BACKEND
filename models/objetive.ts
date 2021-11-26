@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose';
 import {Enum_TipoObjetivo} from './enums';
-import { ProjectModel } from './project';
+import { ProyectModel } from './project';
 
 
 interface Objetive  {
@@ -24,7 +24,7 @@ tipo: {
 
 proyecto: {
     type: Schema.Types.ObjectId,
-    ref: ProjectModel,
+    ref: ProyectModel,
 },
 
 });

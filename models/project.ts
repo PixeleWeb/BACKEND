@@ -3,7 +3,7 @@ import {Enum_EstadoProyecto, Enum_FaseProyecto} from './enums';
 import { UserModel } from './user';
 import { ObjectiveModel } from './objetive';
 
-interface Proyecto{
+interface Proyect{
     nombre: string;
     presupuesto: number;
     fechaInicio: Date;
@@ -15,7 +15,7 @@ interface Proyecto{
     
 }
 
-const ProjectSchema = new Schema<Proyecto>({
+const ProjectSchema = new Schema<Proyect>({
 
     nombre: {
         type: String,
@@ -58,6 +58,6 @@ const ProjectSchema = new Schema<Proyecto>({
 });
 
 
-const ProjectModel = model('Proyecto',ProjectSchema, 'Proyectos');
+const ProyectModel = model('Proyecto',ProjectSchema, 'Proyectos');
 
-export {ProjectModel};
+export { ProyectModel };

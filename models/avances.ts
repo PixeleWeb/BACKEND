@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { ProjectModel } from "./project";
+import { ProyectModel } from "./project";
 import { UserModel } from "./user";
 
 
@@ -30,7 +30,7 @@ const AdvancementSchema= new Schema<Avance>({
     ],
     proyecto:{
         type: Schema.Types.ObjectId,
-        ref: ProjectModel,
+        ref: ProyectModel,
         required:true,
 
     },
