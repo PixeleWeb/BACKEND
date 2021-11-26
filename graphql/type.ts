@@ -46,6 +46,11 @@ type Usuario {
     rol:Enum_Rol!
 }
 
+type Objetivo{
+    descripcion:String!
+    tipo:Enum_TipoObjetivo!
+}
+
 type proyecto{
     _id:ID!
     nombre:String!
@@ -55,9 +60,7 @@ type proyecto{
     estado:Enum_EstadoProyecto!
     fase:Enum_FaseProyecto!
     lider:Usuario!
-    objetivos:[
-    {descripcion:String!, tipo:Enum_TipoObjetivo!}
-    ]
+    objetivos:[Objetivo]
 
 
 }
