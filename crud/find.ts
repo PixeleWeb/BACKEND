@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
 import { UserModel } from '../models/usuario/user';
 import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProjectModel } from '../models/proyecto/project';
+import { ProyectModel } from '../models/proyecto/project';
 
 const main = async()=>{
     await conectarBD();
@@ -26,7 +26,7 @@ const main = async()=>{
 
 //OBTENER LOS PROYECTOS
 
-    await ProjectModel.find().then((u)=>{
+    await ProyectModel.find().then((u)=>{
         console.log('proyectos',u);
     }).catch(e=>{
         console.error('error obteniendo los proyectos',e);
@@ -34,7 +34,7 @@ const main = async()=>{
 
     //OBTENER UN SOLO PROYECTO
 
-    await ProjectModel.findOne({identificacion:"10203050"})
+    await ProyectModel.findOne({identificacion:"10203050"})
     .then((u)=>{
         console.log('proyecto encontrado',u);
     })

@@ -3,13 +3,13 @@ import {Enum_TipoObjetivo} from './enums/enums';
 import { ProyectModel } from './proyecto/project';
 
 
-interface Objetive  {
+interface objetive  {
     descripcion: string;
     tipo: Enum_TipoObjetivo;
     proyecto: Schema.Types.ObjectId
 }
 
-const objectiveSchema = new Schema<Objetive>({
+const objetiveSchema = new Schema<objetive>({
     descripcion: {
         type: String,
         required: true,
@@ -28,7 +28,7 @@ proyecto: {
 
 });
 
-const ObjectiveModel = model ('Objetivo', objectiveSchema);
+const ObjectiveModel = model ("Objetivo", objetiveSchema);
 
 export { ObjectiveModel };
 
