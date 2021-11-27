@@ -51,7 +51,7 @@ type Objetivo{
     tipo:Enum_TipoObjetivo!
 }
 
-type proyecto{
+type Proyecto{
     _id:ID!
     nombre:String!
     presupuesto:Float!
@@ -69,6 +69,7 @@ type proyecto{
 type Query {
     Usuarios:[Usuario]
     Usuario(_id:String!):Usuario
+    Proyectos:[Proyecto]
 }
 
 type Mutation{

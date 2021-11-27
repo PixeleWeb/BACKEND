@@ -31,8 +31,8 @@ enum Enum_FaseProyecto{
 }
 
 enum Enum_TipoObjetivo{
-    GENERAL = "GENERAL",
-    ESPECIFICO = "ESPECIFICO",
+    GENERAL = 'GENERAL',
+    ESPECIFICO = 'ESPECIFICO',
 }
 
 export {Enum_Rol, Enum_EstadoUsuario, Enum_EstadoInscripcion, Enum_EstadoProyecto, Enum_FaseProyecto, Enum_TipoObjetivo};

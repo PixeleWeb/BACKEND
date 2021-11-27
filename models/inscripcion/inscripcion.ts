@@ -1,6 +1,7 @@
 import {Schema, model} from 'mongoose';
-import {Enum_EstadoInscripcion} from '..enums/enums';
-import { UserModel } from '..usuario/user';
+import {Enum_EstadoInscripcion} from '../enums/enums';
+import { ProjectModel } from '../proyecto/project';
+import { UserModel } from '../usuario/user';
 
 
 interface Inscription{
@@ -15,7 +16,7 @@ const InscriptionSchema = new Schema<Inscription>({
     estado: {
         type: String,
         enum: Enum_EstadoInscripcion,
-        default: Enum_EstadoInscripcion.pendiente,
+        default: Enum_EstadoInscripcion.PENDIENTE,
         required: true,
     },
 
@@ -29,8 +30,14 @@ const InscriptionSchema = new Schema<Inscription>({
         required:true
     },
 
+    proyecto:{
+        type: Schema.Types.ObjectId,
+        ref: ProjectModel,
+        required: true,
+    },
 
-        estudiante: {
+
+    estudiante: {
         type: Schema.Types.ObjectId,
         ref: UserModel,
         required: true,
