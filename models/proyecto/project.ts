@@ -26,10 +26,17 @@ const projectSchema = new Schema<Proyecto>({
     },
     objetivos:[
         {
-            type: Schema.Types.ObjectId,
-            ref: ObjectiveModel,
+            descripcion:{
+                type: String,
+                required: true,
+            },
+            tipo:{
+                type: String,
+                enum: Enum_TipoObjetivo,
+            },
         },
     ],
+
     presupuesto:{
         type: Number,
         required: true,
