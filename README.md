@@ -9,15 +9,6 @@ Grupo Pixeles Web
 
 \*\*Integrantes
 
-EDIER VICENTE ARISTIZABAL GIRALDO
-
-Ing. Geólogo
-
-edieraristizabal@gmail.com
-
-Mi propósito es el desarrollo de aplicaciones para datos y análisis geoespaciales
-
-
 LUISA MARIA MATOMA SANCHEZ
 
 Correo: lifelm2004@gmail.com
