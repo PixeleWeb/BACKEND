@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
 import { UserModel } from '../models/usuario/user';
 import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProjectModel } from '../models/proyecto/project';
+import { ProyectModel } from '../models/proyecto/project';
 
 const main = async()=>{
     await conectarBD();
@@ -27,18 +27,16 @@ const main = async()=>{
 
 //CREAR UN PROYECTO
 
-    ProjectModel.create({
+    ProyectModel.create({
 
         nombre: "prueba200",
-        objetivosGenerales: "letras",
-        objetivosEspecificos: "cositas varias",
         presupuesto: "123",
         fechaInicio: "2021-01-12",
         fechaFin: "2021-02-14",
         lider: "6198404915b34712ecd3d4a7",
-        estado: Enum_EstadoProyecto.activo,
-        fase: Enum_FaseProyecto.desarrollo,
-        inscripciones: Enum_EstadoInscripcion.pendiente,
+        estado: Enum_EstadoProyecto.ACTIVO,
+        fase: Enum_FaseProyecto.DESARROLLO,
+        inscripciones: Enum_EstadoInscripcion.PENDIENTE,
         avances: "prueba",
     })
         .then((u) => {

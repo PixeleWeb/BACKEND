@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
 import { UserModel } from '../models/usuario/user';
 import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProjectModel } from '../models/proyecto/project';
+import { ProyectModel } from '../models/proyecto/project';
 
 const main = async()=>{
     await conectarBD();
@@ -18,7 +18,7 @@ const main = async()=>{
 
 //ELIMINAR PROYECTO
 
-    await ProjectModel.findOneAndDelete({correo:'miguel@hotmail.com'})
+    await ProyectModel.findOneAndDelete({correo:'miguel@hotmail.com'})
     .then((u)=>{
         console.log('proyecto eliminado',u);
     })
