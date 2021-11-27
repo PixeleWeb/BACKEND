@@ -15,7 +15,7 @@ interface proyect{
     
 }
 
-const projectSchema = new Schema<proyect>({
+const proyectSchema = new Schema<proyect>({
 
     nombre: {
         type: String,
@@ -60,6 +60,6 @@ const projectSchema = new Schema<proyect>({
 });
 
 
-const ProyectModel = model ('Proyecto', projectSchema, 'Proyectos');
+const ProyectModel = model ('Proyecto', proyectSchema, 'Proyectos');
 
 export { ProyectModel };
