@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
 import { UserModel } from '../models/usuario/user';
 import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProyectModel } from '../models/proyecto/project';
+import { ProjectModel } from '../models/proyecto/projecto';
 
 
 const main = async()=>{
@@ -22,7 +22,7 @@ const main = async()=>{
 
 //EDITAR UN PROYECTO
 
-    await ProyectModel.findOneAndUpdate(
+    await ProjectModel.findOneAndUpdate(
         {nombre:'juan'},
         {
         objetivosGenerales:'objetivo principal esta ok',

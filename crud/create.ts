@@ -1,7 +1,7 @@
 import conectarBD from '../db/db';
 import { UserModel } from '../models/usuario/user';
 import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProyectModel } from '../models/proyecto/project';
+import { ProjectModel } from '../models/proyecto/projecto';
 
 const main = async()=>{
     await conectarBD();
@@ -27,7 +27,7 @@ const main = async()=>{
 
 //CREAR UN PROYECTO
 
-    ProyectModel.create({
+    ProjectModel.create({
 
         nombre: "prueba200",
         presupuesto: "123",

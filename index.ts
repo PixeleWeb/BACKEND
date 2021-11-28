@@ -3,13 +3,13 @@ import cors from 'cors';
 import {ApolloServer} from 'apollo-server-express';
 import dotenv from 'dotenv';
 import conectarBD from './db/db';
-import {tiposGlobales} from './graphql/type';
+import {tipos} from './graphql/type';
 import {resolvers} from './graphql/resolvers';
 
 dotenv.config();
 
 const server = new ApolloServer({
-    typeDefs: tiposGlobales,
+    typeDefs: tipos,
     resolvers:resolvers,
 });
 

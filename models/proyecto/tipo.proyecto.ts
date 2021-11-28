@@ -52,6 +52,34 @@ const tiposProyecto = gql`
             lider: String!
             objetivos: [crearObjetivo]
         ): Proyecto
+        editarProyecto(
+            nombre: String!
+            presupuesto: Float!
+            fechaInicio: Date!
+            fechaFin: Date!
+            estado: Enum_EstadoProyecto!
+            fase: Enum_FaseProyecto!
+            lider: String!
+            objetivos: [crearObjetivo]
+        ): Proyecto
+
+        crearObjetivo(
+            descripcion: String!
+            tipo: Enum_TipoObjetivo!
+        ):Proyecto
+        editarObjetivo(
+            nombre: String!
+            presupuesto: Float!
+            fechaInicio: Date!
+            fechaFin: Date!
+            estado: Enum_EstadoProyecto!
+            fase: Enum_FaseProyecto!
+            lider: String!            
+        ):Proyecto
+        eliminarObjetivo(
+            descripcion: String!
+            tipo: Enum_TipoObjetivo!
+        ):Proyecto
             
     }
 `;
