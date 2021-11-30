@@ -1,7 +1,7 @@
-import conectarBD from '../db/db';
-import { UserModel } from '../models/usuario/user';
-import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums';
-import { ProjectModel } from '../models/proyecto/projecto';
+import conectarBD from '../db/db.js';
+import { UserModel } from '../models/usuario/user.js';
+//import { Enum_Rol,Enum_EstadoProyecto,Enum_FaseProyecto,Enum_EstadoInscripcion } from '../models/enums/enums.js';
+import { ProjectModel } from '../models/proyecto/projecto.js';
 
 
 const main = async()=>{

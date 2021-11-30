@@ -1,9 +1,9 @@
-import { InscripcionModel } from '../inscripcion/inscripcion';
+import { InscripcionModel } from './inscripcion.js';
 
 const resolverInscripciones = {
     Query: {
         Inscripciones: async (parent, args) => {
-        const inscripciones = await InscripcionModel.find();
+        const inscripciones = await InscripcionModel.find().populate('avances');
         return inscripciones;
         },
     },
@@ -21,14 +21,12 @@ const resolverInscripciones = {
         const inscripcionAprobada = await InscripcionModel.findByIdAndUpdate(
             args.id,
                 {
-                    estado: args.estado,
-                    fechaIngreso: args.Date,
-                    fechaEgreso: args.Date, 
-                    proyecto: args.proyecto,
-                    estudiante: args.estudiante,
+                    estado: 'ACEPTADO',
+                    fechaIngreso: Date.now(),
+                    
                 },
-            { new: true }
-        );
+                {new: true}
+                );
         return inscripcionAprobada;
         },
     },

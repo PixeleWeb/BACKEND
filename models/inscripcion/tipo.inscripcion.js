@@ -4,8 +4,8 @@ const tiposInscripcion = gql`
     type Inscripcion {
         _id: ID!
         estado: Enum_EstadoInscripcion!
-        fechaIngreso: Date!
-        fechaEgreso: Date!
+        fechaIngreso: Date
+        fechaEgreso: Date
         proyecto: Proyecto!
         estudiante: Usuario!
     }
@@ -18,6 +18,7 @@ const tiposInscripcion = gql`
         proyecto: String!
         estudiante: String!
         ): Inscripcion
+        
         aprobarInscripcion(id: String!): Inscripcion
 }
 `;

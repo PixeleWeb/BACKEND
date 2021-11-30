@@ -1,4 +1,4 @@
-import { UserModel } from "./user";
+import { UserModel } from "./user.js";
 
 const resolverUsuario ={
     Query:{
@@ -38,7 +38,9 @@ Mutation:{
             rol: args.rol,
             estado: args.estado
 
-        });
+        },
+        {new: true}
+        );
         return usuarioEditado;
 
 

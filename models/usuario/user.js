@@ -1,20 +1,22 @@
-import { Schema, model } from "mongoose";
-import {Enum_Rol , Enum_EstadoUsuario} from '../enums/enums';
+import mongoose from "mongoose";
+//import {Enum_Rol , Enum_EstadoUsuario} from '../enums/enums.js';
+
+const {Schema, model}= mongoose;
 
 
 
-interface user{
-    correo:string,
-    identificacion:string,
-    nombre:string,
-    apellido:string,
-    rol:Enum_Rol,
-    estado:Enum_EstadoUsuario;
-    }
+// interface user{
+//     correo:string,
+//     identificacion:string,
+//     nombre:string,
+//     apellido:string,
+//     rol:Enum_Rol,
+//     estado:Enum_EstadoUsuario;
+//     }
 
 
 
-const userSchema = new Schema<user>({
+const userSchema = new Schema({
 
     nombre:{
         type:String,
@@ -35,7 +37,7 @@ const userSchema = new Schema<user>({
     rol:{
         type:String,
         required:true,
-        enum:Enum_Rol,
+        enum:["ESTUDIANTE","LIDER","ADMINISTRADOR"],
     },
 
     correo:{
@@ -60,8 +62,8 @@ const userSchema = new Schema<user>({
     
     estado:{
         type:String,
-        enum:Enum_EstadoUsuario,
-        default:Enum_EstadoUsuario.PENDIENTE,
+        enum:['PENDIENTE','AUTORIZADO','NO_AUTORIZADO'],
+        default:'PENDIENTE',
     }
 
     
