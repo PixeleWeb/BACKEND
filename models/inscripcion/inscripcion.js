@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-//import {Enum_EstadoInscripcion} from '../enums/enums.js';
 import { ProjectModel } from '../proyecto/projecto.js';
 import { UserModel } from '../usuario/user.js';
 

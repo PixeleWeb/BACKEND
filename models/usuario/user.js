@@ -1,18 +1,11 @@
 import mongoose from "mongoose";
-//import {Enum_Rol , Enum_EstadoUsuario} from '../enums/enums.js';
+
 
 const {Schema, model}= mongoose;
 
 
 
-// interface user{
-//     correo:string,
-//     identificacion:string,
-//     nombre:string,
-//     apellido:string,
-//     rol:Enum_Rol,
-//     estado:Enum_EstadoUsuario;
-//     }
+
 
 
 
