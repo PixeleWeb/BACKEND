@@ -1,20 +1,15 @@
- import { Schema, model } from "mongoose";
- import {Enum_Rol , Enum_EstadoUsuario} from './enums';
+import mongoose from "mongoose";
 
- 
 
- interface user{
-     correo:string,
-     identificacion:string,
-     nombre:string,
-     apellido:string,
-     rol:Enum_Rol,
-     estado:Enum_EstadoUsuario;
-     }
+const {Schema, model}= mongoose;
 
- 
 
-const userSchema = new Schema<user>({
+
+
+
+
+
+const userSchema = new Schema({
 
     nombre:{
         type:String,
@@ -35,7 +30,7 @@ const userSchema = new Schema<user>({
     rol:{
         type:String,
         required:true,
-        enum:Enum_Rol,
+        enum:["ESTUDIANTE","LIDER","ADMINISTRADOR"],
     },
 
     correo:{
@@ -54,14 +49,14 @@ const userSchema = new Schema<user>({
             },
             message:'el formato del correo electronico es incorrecto',
         },
-       
+    
     },
     
-      
+    
     estado:{
         type:String,
-        enum:Enum_EstadoUsuario,
-        default:Enum_EstadoUsuario.pendiente,
+        enum:['PENDIENTE','AUTORIZADO','NO_AUTORIZADO'],
+        default:'PENDIENTE',
     }
 
     
